@@ -1,0 +1,4 @@
+/node_modules
+/buck-out
+/.buckd
+/a.out
