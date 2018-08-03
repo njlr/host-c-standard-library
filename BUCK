@@ -5,7 +5,7 @@ genrule(
   out = 'include', 
   srcs = [
     'index.js', 
-    'consumer_c89.c', 
+    'consumer_c99.c', 
   ], 
   cmd = 'export CC=' + cc + ' && node $SRCS $OUT', 
 )
