@@ -6,6 +6,7 @@ sudo:
 
 install:
   - .travis/install-$TRAVIS_OS_NAME.sh
+  - export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 script:
   - buck build :hello
