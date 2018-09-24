@@ -5,11 +5,11 @@ sudo:
   - false
 
 install:
- - .travis/install-$TRAVIS_OS_NAME.sh
+  - .travis/install-$TRAVIS_OS_NAME.sh
 
 script:
- - buck build :hello
- - buck run :hello
+  - buck build :hello
+  - buck run :hello
 
 cache:
   directories:
