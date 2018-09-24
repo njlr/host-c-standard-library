@@ -6,7 +6,6 @@ sudo:
 
 install:
   - .travis/install-$TRAVIS_OS_NAME.sh
-  - jenv global 1.8
 
 script:
   - buck build :hello
