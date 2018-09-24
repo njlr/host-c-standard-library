@@ -20,6 +20,7 @@ install:
  - brew tap caskroom/versions
  - brew cask install java8
  - brew tap facebook/fb
+ - brew install watchman
  - brew install buck
 
 script:
