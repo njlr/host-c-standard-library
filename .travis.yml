@@ -16,7 +16,6 @@ addons:
       - clang++
 
 install:
- - xcode-select --install
  - brew tap caskroom/cask
  - brew tap caskroom/versions
  - brew cask install java8
