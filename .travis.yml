@@ -4,17 +4,6 @@ os:
 sudo:
   - false
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - cmake
-      - python3
-      - java
-      - clang
-      - clang++
-
 install:
  - brew tap caskroom/cask
  - brew tap caskroom/versions
