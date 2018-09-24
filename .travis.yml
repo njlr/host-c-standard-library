@@ -24,4 +24,5 @@ install:
  - brew install buck
 
 script:
-  - build.py --toolchain ${TOOLCHAIN} --config ${CONFIG} --verbose --test ${EXTRA}
+ - buck build :hello
+ - buck run :hello
