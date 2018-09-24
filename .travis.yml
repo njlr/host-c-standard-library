@@ -10,3 +10,7 @@ install:
 script:
  - buck build :hello
  - buck run :hello
+
+cache:
+  directories:
+    - $HOME/Library/Caches/Homebrew
