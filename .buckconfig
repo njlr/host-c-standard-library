@@ -1,6 +1,7 @@
 [project]
-ignore = .git
+ignore = .git 
 
 [cxx]
-untracked_headers = error
-cflags = -nostdinc
+untracked_headers = error 
+cflags = -nostdinc 
+ldflags = -nodefaultlibs -nostdlib 

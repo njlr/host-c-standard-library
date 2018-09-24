@@ -10,11 +10,30 @@ genrule(
   cmd = 'export CC=' + cc + ' && node $SRCS $OUT', 
 )
 
+genrule(
+  name = 'system-framework', 
+  out = 'System.framework', 
+  cmd = ' && '.join([
+    'mkdir -p $OUT', 
+    'cp -r /System/Library/Frameworks/System.framework/System $OUT/System', 
+    'cp -r /System/Library/Frameworks/System.framework/Resources $OUT/Resources', 
+  ]), 
+)
+
+prebuilt_apple_framework(
+  name = 'system', 
+  framework = ':system-framework', 
+  preferred_linkage = 'static', 
+)
+
 prebuilt_cxx_library(
   name = 'c-standard-library', 
-  header_only = True, 
   header_dirs = [
     ':headers', 
+  ], 
+  header_only = True, 
+  deps = [
+    ':system', 
   ], 
   visibility = [
     'PUBLIC', 
