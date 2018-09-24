@@ -7,7 +7,6 @@ sudo:
 install:
  - brew tap caskroom/cask
  - brew tap caskroom/versions
- - brew cask install java
  - brew cask install java8
  - brew install jenv
  - jenv global 1.8
