@@ -2,7 +2,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 brew cask install java8
 brew install jenv
-rm -rf ~/.jenv
+rm -rf $HOME/.jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.bash_profile
 echo 'eval "$(jenv init -)"' >> ~/.bash_profile
