@@ -8,6 +8,8 @@ install:
  - brew tap caskroom/cask
  - brew tap caskroom/versions
  - brew cask install java
+ - brew unlink java
+ - brew cask install java8
  - brew tap facebook/fb
  - brew install watchman
  - brew install buck
