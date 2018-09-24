@@ -1,0 +1,27 @@
+os:
+  - osx
+
+sudo:
+  - false
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - cmake
+      - python3
+      - java
+      - clang
+      - clang++
+
+install:
+ - xcode-select --install
+ - brew tap caskroom/cask
+ - brew tap caskroom/versions
+ - brew cask install java8
+ - brew tap facebook/fb
+ - brew install buck
+
+script:
+  - build.py --toolchain ${TOOLCHAIN} --config ${CONFIG} --verbose --test ${EXTRA}
