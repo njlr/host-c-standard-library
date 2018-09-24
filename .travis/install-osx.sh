@@ -7,7 +7,7 @@ brew cask install java8
 brew install jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 export PATH="$HOME/.jenv/shims:$PATH" 
-echo 'export PATH="$HOME/.jenv/shims:$PATH"' >> ~/.bashrc
+echo 'export PATH="$HOME/.jenv/shims:$HOME/.jenv/bin:$PATH"' >> ~/.bashrc
 ls /Library/Java/JavaVirtualMachines/
 yes | jenv add /Library/Java/JavaVirtualMachines/*/Contents/Home/
 jenv versions 
