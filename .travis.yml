@@ -5,7 +5,7 @@ sudo:
   - false
 
 install:
-- if [ $TRAVIS_OS_NAME = osx ]; then ./travis/macosx.sh; fi
+ - .travis/install-$TRAVIS_OS_NAME.sh
 
 script:
  - buck build :hello
