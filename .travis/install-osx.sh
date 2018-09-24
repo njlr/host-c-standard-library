@@ -10,6 +10,7 @@ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/
 jenv rehash 
 jenv versions 
 jenv global 1.8
+cat /Users/travis/.jenv/version
 brew tap facebook/fb
 brew install watchman
 brew install buck
